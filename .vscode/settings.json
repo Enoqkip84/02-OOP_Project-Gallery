@@ -3,7 +3,7 @@
   "files.autoSave": "off",
   "editor.tabSize": 1,
   "editor.wordWrap": "on",
-  "terminal.integrated.fontSize": 19,
+  "terminal.integrated.fontSize": 17,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
