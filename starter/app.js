@@ -7,4 +7,11 @@ function getElement(selection) {
     `Please check "${selection}" selector, no such element exists`
   );
 }
-console.log(56);
+
+function Gallery(element) {
+  this.list = element.querySelectorAll('.img');
+  console.log(this.list);
+}
+
+const nature = new Gallery(getElement('.nature'));
+const city = new Gallery(getElement('.city'));
