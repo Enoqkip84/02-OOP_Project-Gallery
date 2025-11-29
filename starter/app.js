@@ -19,8 +19,14 @@ function Gallery(element) {
   this.prevBtn = getElement('.prev-btn');
   this.nextBtn = getElement('.next-btn');
   // bind functions
-  this.container.addEventListener('click');
+  this.openModal=this.openModal.bind(this)
+  this.container.addEventListener('click', this.openModal);
 }
+
+Gallery.prototype.openModal = function () {
+  console.log(this);
+  console.log('open modal');
+};
 
 const nature = new Gallery(getElement('.nature'));
 const city = new Gallery(getElement('.city'));

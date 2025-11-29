@@ -9,7 +9,7 @@
   },
 
   "emmet.triggerExpansionOnTab": true,
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "prettier.jsxSingleQuote": true,
   "prettier.semi": true,
   "prettier.singleQuote": true,
