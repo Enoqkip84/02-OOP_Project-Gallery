@@ -18,14 +18,25 @@ function Gallery(element) {
   this.closeBtn = getElement('.close-btn');
   this.prevBtn = getElement('.prev-btn');
   this.nextBtn = getElement('.next-btn');
+  // self reference
+  // let self = this;ß
   // bind functions
-  this.openModal=this.openModal.bind(this)
-  this.container.addEventListener('click', this.openModal);
+  this.openModal = this.openModal.bind(this);
+  this.container.addEventListener(
+    'click',
+    // container event
+    function (e) {
+      console.log(this);
+      // self.openModal();
+      this.openModal();
+    }.bind(this)
+  );
 }
 
 Gallery.prototype.openModal = function () {
   console.log(this);
   console.log('open modal');
+  this.modal.classList.add('open');
 };
 
 const nature = new Gallery(getElement('.nature'));
