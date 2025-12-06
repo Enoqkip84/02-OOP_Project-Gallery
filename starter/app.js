@@ -16,17 +16,16 @@ function Gallery(element) {
   this.modalImg = getElement('.main-img');
   this.modalImages = getElement('.modal-images');
   this.closeBtn = getElement('.close-btn');
-  this.prevBtn = getElement('.prev-btn');
   this.nextBtn = getElement('.next-btn');
+  this.prevBtn = getElement('.prev-btn');
   // self reference
   // let self = this;ß
   // bind functions
-  this.openModal = this.openModal.bind(this);
+  // this.openModal = this.openModal.bind(this);
+  // container event
   this.container.addEventListener(
     'click',
-    // container event
     function (e) {
-      console.log(this);
       // self.openModal();
       this.openModal();
     }.bind(this)
@@ -34,7 +33,6 @@ function Gallery(element) {
 }
 
 Gallery.prototype.openModal = function () {
-  console.log(this);
   console.log('open modal');
   this.modal.classList.add('open');
 };
