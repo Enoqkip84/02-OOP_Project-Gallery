@@ -19,7 +19,7 @@ function Gallery(element) {
   this.nextBtn = getElement('.next-btn');
   this.prevBtn = getElement('.prev-btn');
   // self reference
-  // let self = this;ß
+  // let self = this;
   // bind functions
   // this.openModal = this.openModal.bind(this);
   // container event
