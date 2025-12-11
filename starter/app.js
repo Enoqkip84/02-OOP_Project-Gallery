@@ -80,7 +80,7 @@ Gallery.prototype.prevImage = function () {
   const prev =
     selected.previousElementSibling || this.modalImages.lastElementChild;
   selected.classList.remove('selected');
-  prev.classList.remove('selected');
+  prev.classList.add('selected');
   this.setMainImage(prev);
 };
 
