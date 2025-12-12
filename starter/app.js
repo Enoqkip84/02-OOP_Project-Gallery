@@ -84,7 +84,15 @@ Gallery.prototype.prevImage = function () {
   this.setMainImage(prev);
 };
 
-Gallery.prototype.chooseImage = function () {};
+Gallery.prototype.chooseImage = function (e) {
+  if (e.target.classList.contains('modal-img')) {
+    const selected = this.modalImages.querySelector('.selected');
+    selected.classList.remove('selected');
+
+    this.setMainImage(e.target);
+    e.target.classList.add('selected');
+  }
+};
 
 const nature = new Gallery(getElement('.nature'));
 const city = new Gallery(getElement('.city'));
